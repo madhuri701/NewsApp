@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".NewsDetailActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/idtoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        app:titleTextColor="@color/white"
+        android:text = "News App"/>
+    <ScrollView
+        android:id="@+id/idScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/idtoolbar"
+        android:layout_above="@+id/idButton">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/idImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:layout_margin="3dp"
+                android:padding="3dp"
+                />
+
+        <TextView
+            android:id="@+id/idtitle"
+            android:layout_below="@+id/idImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textSize="20sp"
+            android:padding="4dp"
+            android:layout_margin="4dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+        <TextView
+            android:id="@+id/idDescription"
+            android:layout_below="@+id/idtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textSize="30dp"
+            android:layout_marginTop="5dp"
+            android:padding="4dp"
+            android:layout_margin="4dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/idContent"
+                android:layout_below="@+id/idDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Content"
+                android:textSize="18dp"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+
+        </RelativeLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/idButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:text="Read full news here!"
+        android:background="@color/black"/>
+
+
+
+
+</RelativeLayout>
